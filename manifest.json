@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Auto Connector",
+  "version": "1.0",
+  "description": "Automate connection requests on LinkedIn.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/mynetwork/grow/"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html"
+  }
+}
